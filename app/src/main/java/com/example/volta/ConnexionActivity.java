@@ -19,6 +19,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,13 +41,19 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class SignInActivity extends AppCompatActivity implements
+import java.nio.file.Files;
+
+public class ConnexionActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
 
     private SignInButton mSignInButton;
+    private EditText Email;
+    private EditText passWord;
+    private TextView Inscription;
+    private Button connexion;
 
     private GoogleApiClient mGoogleApiClient;
 
@@ -54,10 +63,14 @@ public class SignInActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_conexion);
 
         // Assign fields
         mSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        Email = (EditText) findViewById(R.id.Email);
+        passWord = (EditText) findViewById(R.id.PassWord);
+        Inscription = (TextView) findViewById(R.id.Inscription);
+        connexion = (Button) findViewById(R.id.ConnexionEmail);
 
         // Set click listeners
         mSignInButton.setOnClickListener(this);
@@ -135,11 +148,11 @@ public class SignInActivity extends AppCompatActivity implements
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
-                            Toast.makeText(SignInActivity.this, "Authentication failed.",
+                            Toast.makeText(ConnexionActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             Log.d(TAG, "i am working");
-                            startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                            startActivity(new Intent(ConnexionActivity.this, MainActivity.class));
                             finish();
                         }
                     }
