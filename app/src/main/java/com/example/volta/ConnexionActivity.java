@@ -27,6 +27,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -42,12 +43,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.nio.file.Files;
+import java.util.Arrays;
 
 public class ConnexionActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
+    private static final int EMAIL_SIGN_IN = 123;
 
     private SignInButton mSignInButton;
     private EditText Email;
@@ -59,6 +62,8 @@ public class ConnexionActivity extends AppCompatActivity implements
 
     // Firebase instance variables
     private FirebaseAuth mFirebaseAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,21 @@ public class ConnexionActivity extends AppCompatActivity implements
         Inscription = (TextView) findViewById(R.id.Inscription);
         connexion = (Button) findViewById(R.id.ConnexionEmail);
 
+        Inscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(
+                        AuthUI.getInstance()
+                                .createSignInIntentBuilder()
+                                .setTheme(R.style.AppTheme)
+                                .setAvailableProviders(
+                                        Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
+                                .setIsSmartLockEnabled(false, true)
+                                .build(),
+                        EMAIL_SIGN_IN);
+
+            }
+        });
         // Set click listeners
         mSignInButton.setOnClickListener(this);
 
@@ -88,6 +108,7 @@ public class ConnexionActivity extends AppCompatActivity implements
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
     }
+
 
     @Override
     public void onClick(View v) {
@@ -158,4 +179,5 @@ public class ConnexionActivity extends AppCompatActivity implements
                     }
                 });
     }
+
 }
