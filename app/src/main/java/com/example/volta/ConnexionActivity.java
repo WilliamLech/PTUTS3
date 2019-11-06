@@ -17,6 +17,7 @@ package com.example.volta;
 
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
@@ -43,7 +43,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import java.nio.file.Files;
 import java.util.Arrays;
 
 public class ConnexionActivity extends AppCompatActivity implements
@@ -210,7 +209,8 @@ public class ConnexionActivity extends AppCompatActivity implements
     }
 
     private void laodUI() {
-
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 
 }
