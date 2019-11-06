@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Volta</string>
 
+
+
+
+    <string name="edit_profil">EDITER LE PROFIL</string>
+
+
     <string name="navigation_drawer_open"> open navidagation drawer</string>
     <string name="navigation_drawer_close"> close navidagation drawer</string>
 </resources>
