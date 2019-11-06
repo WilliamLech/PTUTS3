@@ -8,16 +8,35 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ConnexionActivity" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme.NoActionBAr">
+        <activity android:name=".AcceuilActivity"></activity>
+        <activity
+            android:name=".deconnecterActivity"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".parametreActivity"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".profilActivty"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".analyseActivity"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".preferencesActivity"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".ConnexionActivity"
+            android:theme="@style/AppTheme.NoActionBAr" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBAr">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignInActivity" />
     </application>
 
 </manifest>

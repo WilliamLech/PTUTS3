@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+ <group android:checkableBehavior="single">
+     <item android:id="@+id/nav_Acceuil"
+         android:title="Acceuil">
+     </item>
+     <item android:id="@+id/nav_Pref"
+         android:title="Mes Préférences">
+     </item>
+     <item android:id="@+id/nav_Analyse"
+         android:title="Mon Analyse">
+     </item>
+     <item android:id="@+id/nav_Profil"
+         android:title="Mon profil">
+     </item>
+
+ </group>
+  <group>
+      <item android:id="@+id/nav_Para"
+          android:title="Paramètres">
+      </item>
+      <item android:id="@+id/nav_Deco"
+          android:title="Se Déconnecter">
+      </item>
+  </group>
+</menu>
