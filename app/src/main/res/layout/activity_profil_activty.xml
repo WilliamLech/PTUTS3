@@ -71,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/blue1"
             android:text="@string/edit_profil" />
     </LinearLayout>
 
