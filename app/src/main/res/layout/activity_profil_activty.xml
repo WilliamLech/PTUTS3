@@ -20,57 +20,56 @@
             android:id="@+id/imageButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_margin="25dp"
+            android:layout_margin="15dp"
             android:src="@android:drawable/ic_menu_add" />
-
-        <TextView
-            android:id="@+id/TvPoids"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
 
         <TextView
             android:id="@+id/TvNom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/TvSexe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/TvTaille"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
-
-        <TextView
-            android:id="@+id/TvGrade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
+            android:layout_margin="15dp"
+            android:text="nom" />
 
         <TextView
             android:id="@+id/TvAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
-            android:text="" />
+            android:layout_margin="15dp"
+            android:text="Age" />
+
+        <TextView
+            android:id="@+id/TvPoids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="poids" />
+
+        <TextView
+            android:id="@+id/TvTaille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Taille" />
+
+        <TextView
+            android:id="@+id/TvSexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Genre" />
+
+        <TextView
+            android:id="@+id/TvGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Grade" />
 
         <Button
             android:id="@+id/btnEditer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_margin="15dp"
             android:backgroundTint="@color/blue1"
             android:text="@string/edit_profil" />
     </LinearLayout>

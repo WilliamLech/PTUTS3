@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fond"
     tools:context=".ConnexionActivity">
 
     <LinearLayout
@@ -13,21 +14,36 @@
         tools:layout_editor_absoluteX="220dp"
         tools:layout_editor_absoluteY="261dp">
 
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/logo_blanc"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
 
         <EditText
             android:id="@+id/Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:background="@drawable/custom_email_bg"
+            android:layout_width="300dp"
+            android:drawableLeft="@drawable/icon_user"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -36,20 +52,30 @@
             android:text="Mot De Passe"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:id="@+id/PassWord"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="300dp"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="@drawable/custom_email_bg"
+            android:layout_marginBottom="30dp"
+            android:drawableLeft="@drawable/icon_password"/>
 
         <Button
             android:id="@+id/ConnexionEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Connexion" />
+            android:text="Connexion"
+            android:background="@drawable/buttonconnect"
+            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"/>
+
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
@@ -64,7 +90,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Cliquez ici pour vous inscire" />
+            android:text="Cliquez ici pour vous inscrire !"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
