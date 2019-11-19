@@ -71,11 +71,11 @@ public class ConnexionActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_conexion);
 
         // Assign fields
-        mSignInButton = (SignInButton) findViewById(R.id.sign_in_button);
+        mSignInButton = (SignInButton) findViewById(R.id.sign_in_google);
         Email = (EditText) findViewById(R.id.Email);
-        passWord = (EditText) findViewById(R.id.PassWord);
-        Inscription = (TextView) findViewById(R.id.Inscription);
-        connexion = (Button) findViewById(R.id.ConnexionEmail);
+        passWord = (EditText) findViewById(R.id.password);
+        Inscription = (TextView) findViewById(R.id.inscription);
+        connexion = (Button) findViewById(R.id.button);
 
         connexion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +119,7 @@ public class ConnexionActivity extends AppCompatActivity implements
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_in_button:
+            case R.id.sign_in_google:
                 signIn();
                 break;
         }
@@ -209,7 +209,7 @@ public class ConnexionActivity extends AppCompatActivity implements
     }
 
     private void laodUI() {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

@@ -16,4 +16,22 @@
 
     <color name="blue1">#004FB3 </color>
 
+    <style name="Bold">
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="fontFamily">@font/bold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Italic">
+        <item name="android:fontFamily">@font/italic</item>
+        <item name="fontFamily">@font/italic</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Regular">
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>
