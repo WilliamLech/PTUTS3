@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Volta</string>
-
-
-
-
+    <string name="id">Identifiant</string>
+    <string name="pass">Password</string>
     <string name="edit_profil">EDITER LE PROFIL</string>
 
 

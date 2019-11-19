@@ -30,7 +30,10 @@
             android:theme="@style/AppTheme.NoActionBAr" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBAr">
+            android:theme="@style/AppTheme.NoActionBAr"/>
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
