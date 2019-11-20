@@ -12,29 +12,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBAr">
-        <activity android:name=".ConnexionActivity2"></activity>
-        <activity android:name=".AcceuilActivity" />
+        <activity android:name=".ConnexionActivity2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+        <activity android:name=".AcceuilActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity
             android:name=".deconnecterActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".parametreActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".profilActivty"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".analyseActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".preferencesActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".ConnexionActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
@@ -47,7 +49,8 @@
         </activity>
         <activity
             android:name=".HomeSignIn"
-            android:theme="@style/AppTheme.NoActionBAr" />
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 
 </manifest>
