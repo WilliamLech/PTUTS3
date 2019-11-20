@@ -86,7 +86,10 @@ public class ConnexionActivity extends AppCompatActivity implements
         Inscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(
+
+                Intent i = new Intent(ConnexionActivity.this, ConnexionActivity2.class);
+                startActivity(i);
+               /* startActivityForResult(
                         AuthUI.getInstance()
                                 .createSignInIntentBuilder()
                                 .setTheme(R.style.AppTheme)
@@ -94,7 +97,7 @@ public class ConnexionActivity extends AppCompatActivity implements
                                         Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build()))
                                 .setIsSmartLockEnabled(false, true)
                                 .build(),
-                        EMAIL_SIGN_IN);
+                        EMAIL_SIGN_IN);*/
 
             }
         });
@@ -113,6 +116,8 @@ public class ConnexionActivity extends AppCompatActivity implements
 
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
+
+
     }
 
 
