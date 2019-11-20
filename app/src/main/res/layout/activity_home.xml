@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeSignIn"
-    android:background="@drawable/background">
+    android:background="@drawable/backgroundhome">
 
 
     <Button
@@ -28,37 +28,22 @@
 
     <TextView
         android:id="@+id/welcome"
-        app:fontFamily="@font/bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="150dp"
         android:paddingBottom="25dp"
-        android:text="WELCOME,"
+        android:text="WELCOME !"
         android:textColor="#FFF"
         android:textSize="40sp"
+        app:fontFamily="@font/bold"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
-        android:layout_marginBottom="40dp"
-        android:text="to VOLTA, please sign in"
-        app:fontFamily="@font/regular"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
 
     <TextView
         android:id="@+id/inscription"
@@ -69,7 +54,7 @@
         android:text="Not already registered ?"
         app:fontFamily="@font/regular"
         android:textSize="20sp"
-        android:textColor="#FFF"
+        android:textColor="#000"
         android:layout_marginLeft="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button"
