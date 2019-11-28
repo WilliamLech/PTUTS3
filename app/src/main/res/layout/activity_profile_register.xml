@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileRegister"
+    android:background="@color/fond">
+
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="450dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fleur" />
+
+
+    <EditText
+        android:id="@+id/sexe"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/custom_email_bg"
+        android:ems="10"
+        android:hint="Sexe"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColor="#FFA929"
+        android:textColorHint="#FFA929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profilepic"
+        app:layout_constraintStart_toStartOf="@+id/profilepic"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_email_bg"
+        android:ems="10"
+        android:hint="Age"
+        android:paddingLeft="20dp"
+        android:inputType="date"
+        android:textColor="#FFA929"
+        android:textColorHint="#FFA929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/profilepic"
+        app:layout_constraintStart_toStartOf="@+id/profilepic"
+        app:layout_constraintTop_toBottomOf="@+id/sexe"
+        android:layout_marginBottom="180dp"/>
+
+    <TextView
+        android:id="@+id/pseudo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/bold"
+        android:text="Pseudo"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/sexe"
+        app:layout_constraintEnd_toEndOf="@+id/profilepic"
+        app:layout_constraintStart_toStartOf="@+id/profilepic"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
+
+    <TextView
+        android:id="@+id/explication"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/bold"
+        android:text="Veuillez remplir les champs ci-dessous pour vous inscrire"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/sexe"
+        app:layout_constraintEnd_toEndOf="@+id/pseudo"
+        app:layout_constraintStart_toStartOf="@+id/pseudo"
+        app:layout_constraintTop_toBottomOf="@+id/pseudo"
+        />
+
+    <Button
+        android:id="@+id/valider"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:background="@drawable/signinbutton"
+        android:fontFamily="@font/bold"
+        android:text="CHECK"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/age"
+        app:layout_constraintStart_toStartOf="@+id/age"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

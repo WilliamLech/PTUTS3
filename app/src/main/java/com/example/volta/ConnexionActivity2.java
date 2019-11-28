@@ -4,14 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -43,7 +41,7 @@ public class ConnexionActivity2 extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mDataBase = FirebaseDatabase.getInstance();
-        register = findViewById(R.id.button);
+        register = findViewById(R.id.valider);
         mEmailField = findViewById(R.id.Email);
         mPasswordField = findViewById(R.id.password);
         signin = findViewById(R.id.signin);
@@ -59,8 +57,23 @@ public class ConnexionActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createAccount(mEmailField.getText().toString(),mPasswordField.getText().toString(),pseudo.getText().toString());
+
+              if(!isEmpty(pseudo) && !isEmpty(mEmailField) && !isEmpty(mPasswordField)) {
+                  Intent i = new Intent(ConnexionActivity2.this, ProfileRegister.class);
+                  startActivity(i);
+              }
+              else {
+                  return;
+              }
             }
         });
+    }
+
+    private boolean isEmpty(EditText edit){
+        if(edit.getText().toString().trim().length() > 0){
+            return false;
+        }
+        return true;
     }
 
 

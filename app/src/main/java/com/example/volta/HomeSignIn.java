@@ -16,7 +16,7 @@ public class HomeSignIn extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.valider);
 
         register = findViewById(R.id.register);
 

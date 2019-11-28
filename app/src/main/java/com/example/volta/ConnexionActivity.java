@@ -27,7 +27,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -42,8 +41,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-
-import java.util.Arrays;
 
 public class ConnexionActivity extends AppCompatActivity implements
         GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
@@ -75,7 +72,7 @@ public class ConnexionActivity extends AppCompatActivity implements
         Email = (EditText) findViewById(R.id.Email);
         passWord = (EditText) findViewById(R.id.password);
         Inscription = (TextView) findViewById(R.id.inscription);
-        connexion = (Button) findViewById(R.id.button);
+        connexion = (Button) findViewById(R.id.valider);
 
         connexion.setOnClickListener(new View.OnClickListener() {
             @Override

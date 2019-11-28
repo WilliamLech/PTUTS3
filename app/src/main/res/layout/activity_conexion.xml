@@ -8,7 +8,7 @@
     tools:context=".ConnexionActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/valider"
 
         android:layout_width="150dp"
         android:layout_height="60dp"
@@ -37,9 +37,9 @@
         android:textColor="#FFF"
         android:textSize="40sp"
         app:fontFamily="@font/bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/valider"
+        app:layout_constraintEnd_toEndOf="@+id/valider"
+        app:layout_constraintStart_toStartOf="@+id/valider"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -57,7 +57,7 @@
         android:paddingLeft="20dp"
         android:textColor="#FFA929"
         android:textColorHint="#FFA929"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/valider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
@@ -72,7 +72,7 @@
         android:paddingLeft="20dp"
         android:inputType="textPassword"
         android:background="@drawable/custom_email_bg"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/valider"
         app:layout_constraintEnd_toEndOf="@+id/Email"
         app:layout_constraintStart_toStartOf="@+id/Email"
         app:layout_constraintTop_toBottomOf="@+id/Email"
@@ -92,8 +92,8 @@
         android:textColor="#FFA929"
         android:textSize="30sp"
         app:fontFamily="@font/bold"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/valider"
+        app:layout_constraintStart_toEndOf="@+id/valider"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
@@ -114,9 +114,9 @@
         android:layout_marginBottom="60dp"
         android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/valider"
+        app:layout_constraintStart_toStartOf="@+id/valider"
+        app:layout_constraintTop_toBottomOf="@+id/valider"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
