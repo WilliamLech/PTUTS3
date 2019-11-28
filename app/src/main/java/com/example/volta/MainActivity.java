@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -23,7 +24,7 @@ import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser firebaseUser;
@@ -50,6 +51,40 @@ public class MainActivity extends AppCompatActivity{
         navigationView.addSpaceItem(new SpaceItem("", R.drawable.ic_settings_black_24dp));
 
 
+       navigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
+           @Override
+           public void onCentreButtonClick() {
+               navigationView.setCentreButtonSelectable(true);
+           }
+
+           @Override
+           public void onItemClick(int itemIndex, String itemName) {
+               switch (itemIndex) {
+                   case 0:
+                       Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT).show();
+                       break;
+                   case 1:
+                       Intent i = new Intent(MainActivity.this, AddSport.class);
+                       startActivity(i);
+                       break;
+                   case 2:
+                       Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT).show();
+                       break;
+                   case 3:
+                       Toast.makeText(MainActivity.this, "test", Toast.LENGTH_SHORT).show();
+                       break;
+
+                   default:
+
+               }
+           }
+
+           @Override
+           public void onItemReselected(int itemIndex, String itemName) {
+
+           }
+       });
+
     }
 
 
@@ -72,6 +107,8 @@ public class MainActivity extends AppCompatActivity{
             return;
         }
     }
+
+
 
 
 }

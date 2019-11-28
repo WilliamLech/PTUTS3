@@ -3,24 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <com.luseen.spacenavigation.SpaceNavigationView
-        android:id="@+id/space"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="1dp"
-        android:gravity="bottom"
-        app:active_item_color="@color/white"
-        app:centre_button_color="@color/white"
-        app:centre_button_icon="@drawable/ic_flash_on_black_24dp"
-        app:inactive_item_color="@color/black"
-        app:space_background_color="@color/lightorange"
-        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
-        app:space_item_icon_size="@dimen/space_item_icon_default_size"
-        app:space_item_text_size="@dimen/space_item_text_default_size" />
+    android:layout_height="match_parent"
+    tools:context=".AddSport">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -51,4 +35,29 @@
         android:textColor="@color/white"
         android:textSize="40sp" />
 
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="345dp"
+        android:text="ADD SPORT" />
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="1dp"
+        android:gravity="bottom"
+        app:active_item_color="@color/white"
+        app:centre_button_color="@color/white"
+        app:centre_button_icon="@drawable/ic_flash_on_black_24dp"
+        app:inactive_item_color="@color/black"
+        app:space_background_color="@color/lightorange"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_icon_size="@dimen/space_item_icon_default_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
 </RelativeLayout>
