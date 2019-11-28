@@ -40,5 +40,4 @@
         <item name="fontFamily">@font/regular</item>
         <item name="android:textStyle">normal</item>
     </style>
-
 </resources>
